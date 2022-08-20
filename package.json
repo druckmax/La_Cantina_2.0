@@ -1,0 +1,17 @@
+{
+  "name": "la_cantina_2.0",
+  "version": "1.0.0",
+  "description": "Restaurant Page for Tapas Bar in Leipzig",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --open",
+    "build": "parcel build src/index.html --dist-dir output"
+  },
+  "keywords": [],
+  "author": "Max Sommerfeld",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "latest"
+  },
+  "browsersList": "> 0.5%, last 5 versions, Firefox ESR, not dead"
+}
