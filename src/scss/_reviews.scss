@@ -1,0 +1,14 @@
+.reviewContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 150rem;
+  margin: 5rem auto;
+  padding: 0 2rem;
+
+  a {
+    img {
+      width: clamp(10rem, 25vw, 18rem)
+    }
+  }
+}

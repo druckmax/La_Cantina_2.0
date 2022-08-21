@@ -1,0 +1,74 @@
+.heroContainer {
+  background: url(../img/bg/bg_willy_vertical.png) no-repeat center center/cover;
+  background-attachment: local;
+  height: 180vw;
+
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+    .heroHeadingGroup {
+      text-transform: uppercase;
+      text-align: center;
+      margin: $padding-medium 0;
+      width: 100%;
+      line-height: .7;
+
+      .crown {
+        padding-bottom: $padding-large;
+        width: 90px;
+      }
+
+      .heroMainHeading {
+        font-family: $font-special-main;
+        font-size: clamp(2rem, 18vmin, 8rem);
+        font-weight: 100;
+        letter-spacing: 7px;
+        padding-bottom: .5rem;
+      }
+
+      .heroSubHeading {
+        font-family: $font-special-sec;
+        font-size: clamp(.5rem, 7vmin, 2.5rem);
+        font-weight: lighter;
+        letter-spacing: 1px;
+      }
+    }
+
+    .heroText {
+      max-width: 33rem;
+      padding: $padding-medium;
+      line-height: 1.8;
+      letter-spacing: 1px;
+      font-size: 1.6rem;
+      font-weight: 100;
+
+      .text-bold {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .heroContactBtn {
+    position: relative;
+    margin: 4rem 0;
+
+    .heroBtn {
+      @include absCenter;
+    }
+
+    .hero-circle {
+      @include absCenter;
+      width: 33rem;
+    }
+
+    .hero-arrow-down {
+      height: 10vh;
+      transform: translateY(150%);
+    }
+  }
+}

@@ -1,0 +1,78 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #1b1b1b;
+  color: #ddd;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: $font-main;
+  font-weight: 300;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../img/bg/cantina_paint_bg_horizontal.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    opacity: .5;
+    z-index: -1;
+  }
+}
+
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  text-align: center;
+  color: $color-text;
+}
+
+li {
+  list-style: none;
+}
+
+/* Utility */
+
+.sectionHeading {
+  font-family: $font-special-fallback;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size:1.8rem;
+
+  img {
+    max-width: 50%;
+    position: absolute;
+    left: 0;
+    transform: translateX(50%);
+  }
+}
+
+.mainBtn {
+  color: $color-text-dark;
+  border: none;
+  font-size: 1.8rem;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: $color-btn;
+  padding: 1.6rem 4.2rem;
+  border-radius: $border-radius-small;
+  // box-shadow: 0 2px 2px #aaa;
+}

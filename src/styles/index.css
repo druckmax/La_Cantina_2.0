@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Unna:wght@400;700&display=swap");
+@font-face {
+  font-family: "Handwriting";
+  src: url(../fonts/FeliksHandwriting/feliksHandwriting.woff2) format("woff2");
+  src: url(../fonts/FeliksHandwriting/feliksHandwriting.woff) format("woff");
+}
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #1b1b1b;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+}
+
+.wrapper {
+  margin: 4rem;
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background: url(../img/bg/cantina_paint_bg_vertical.jpg) no-repeat center center/cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.heroContainer .navbar {
+  position: absolute;
+  display: flex;
+}
+
+/*# sourceMappingURL=index.css.map */

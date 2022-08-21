@@ -4,14 +4,15 @@
   "description": "Restaurant Page for Tapas Bar in Leipzig",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel --open",
+    "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html --dist-dir output"
   },
   "keywords": [],
   "author": "Max Sommerfeld",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "latest"
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.54.5"
   },
   "browsersList": "> 0.5%, last 5 versions, Firefox ESR, not dead"
 }

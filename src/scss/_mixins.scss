@@ -1,0 +1,36 @@
+// ----- Media Queries ----- 
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+      @media only screen and (min-width: 50em)
+      {@content};
+  }
+  @if $breakpoint == desktop-sm {
+      @media only screen and (min-width: 71.875em)
+      {@content};
+  }
+  @if $breakpoint == desktop-lg {
+      @media only screen and (min-width: 100em)
+      {@content};
+  }
+  @if $breakpoint == desktop-xl {
+      @media only screen and (min-width: 2350px)
+      {@content};
+  }
+}
+
+// ----- Positioning -----
+
+@mixin flexMe ($flex_direction) {
+  display: flex;
+  flex-direction: $flex_direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
