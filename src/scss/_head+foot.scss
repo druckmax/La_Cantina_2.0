@@ -1,10 +1,28 @@
 // Header
 .navigation {
   padding: 0 0 $padding-small 0;
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   font-size: 1.4rem;
+  width: 100vw;
+  padding: 0 2rem;
+
+  .linkGroup {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    position: relative;
+  
+    @include respond(landscape) {
+      // border: 1px solid yellow;
+      width: 60%;
+    }
+    @include respond(desktop-lg) {
+      // border: 1px solid yellow;
+      width: 40%;
+    }
+  }
 
   .nav-logo,
   .home,
@@ -20,12 +38,14 @@
   }
 
   .nav-contact-btn {
+    position: relative;
+    right: -2rem;
     background-color: $color-btn;
     color: $color-text-dark;
-    height: 50px;
+    height: 5rem;
     display: flex;
     align-items: flex-end;
-    padding: 1rem 1.5rem .8rem 2rem;
+    padding: 1rem 1.5rem 1rem 2rem;
     transform: translateY(-1rem);
     border-bottom-left-radius: 15px;
   }
@@ -39,6 +59,7 @@ footer {
   flex-direction: column;
   background-color: rgba(12, 12, 12, 1);
   color: #555;
+  width: 100vw;
 
   .footerRow {
     display: flex;
@@ -47,6 +68,11 @@ footer {
     align-items: center;
     position: relative;
     padding: 2rem 0;
+
+    @include respond(desktop-lg) {
+      max-width: 100rem;
+      margin: auto;
+    }
 
     .footerLink {
       color: #888;
@@ -75,9 +101,11 @@ footer {
     }
 
     .thanks {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 2;
-
+      width: 50%;
+      // border: 1px solid red;
+      width: fit-content;
 
     }
 
@@ -94,8 +122,16 @@ footer {
     }
   }
 
-  .rowPadding {
+  .btnThanksGroup {
     height: 10rem;
+    // border: 1px solid green;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include respond(desktop-sm) {
+      max-width: 50rem;
+      margin: auto;
+    }
   }
 
 

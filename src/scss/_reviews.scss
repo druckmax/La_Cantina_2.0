@@ -1,14 +1,42 @@
 .reviewContainer {
+  background: url(../img/bg/bg_willy_vertical.png) no-repeat top center/cover;
+  background-attachment: fixed;
+  width: 100%;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  height: 60vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 150rem;
-  margin: 5rem auto;
-  padding: 0 2rem;
 
-  a {
-    img {
-      width: clamp(10rem, 25vw, 18rem)
+  @include respond(desktop-sm) {
+    height: 50vh;
+  }
+
+  @include respond(desktop-lg) {
+    background-size: 70%;
+    background-repeat: repeat-x;
+  }
+
+  @include respond(desktop-xl) {
+    background-size: 40%;
+    background-position: 0 -250%;
+  }
+
+  .reviewButtonGroup {
+    width: 100%;
+    display: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 110rem;
+
+    a {
+      img {
+        width: clamp(10rem, 15vw, 20rem);
+      }
     }
   }
+
+
 }

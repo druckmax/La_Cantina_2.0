@@ -1,7 +1,49 @@
 .heroContainer {
   background: url(../img/bg/bg_willy_vertical.png) no-repeat center center/cover;
-  background-attachment: local;
-  height: 180vw;
+  background-attachment: fixed;
+  height: 160vw;
+
+  @include respond(phone-xs) {
+    height: 190vw;
+  }
+
+  @include respond(landscape) {
+    height: 100vh;
+  }
+
+  @include respond(desktop-lg) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-size: 70%;
+    background-repeat: repeat-x;
+  }
+
+  @include respond(desktop-xl) {
+    background-size: 40%;
+    // background-position: 0 -10%;
+  }
+
+  .heroImg {
+    display: none;
+    width: 40%;
+    height: 65vh;
+    border-radius: 50px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    background: url(../img/components/cantina_outside.png) no-repeat;
+    background-size: cover;
+    background-position: 40%;
+    // box-shadow: 0 10px 10px 10px rgba(0, 0, 0, .4);
+    box-shadow: 0 10px 20px rgba($color: #000, $alpha: .4);
+    // outline: 5px solid rgb(63, 63, 63, .5);
+    outline-offset: 30px;
+    // overflow: hidden;
+
+    @include respond(desktop-lg) {
+      display: block;
+    }
+  }
 
   .heroContent {
     display: flex;
@@ -9,7 +51,13 @@
     justify-content: center;
     align-items: center;
     width: 90%;
+    height: 100%;
     margin: auto;
+    // border: 1px solid red;
+
+    @include respond(desktop-lg) {
+      width: 50%;
+    }
 
     .heroHeadingGroup {
       text-transform: uppercase;
@@ -20,12 +68,12 @@
 
       .crown {
         padding-bottom: $padding-large;
-        width: 90px;
+        width: clamp(50px, 25vw, 90px);
       }
 
       .heroMainHeading {
         font-family: $font-special-main;
-        font-size: clamp(2rem, 18vmin, 8rem);
+        font-size: clamp(2rem, 18vmin, 10rem);
         font-weight: 100;
         letter-spacing: 7px;
         padding-bottom: .5rem;
@@ -33,19 +81,25 @@
 
       .heroSubHeading {
         font-family: $font-special-sec;
-        font-size: clamp(.5rem, 7vmin, 2.5rem);
+        font-size: clamp(.5rem, 7vmin, 3rem);
         font-weight: lighter;
         letter-spacing: 1px;
       }
     }
 
     .heroText {
-      max-width: 33rem;
+      max-width: 50rem;
       padding: $padding-medium;
       line-height: 1.8;
       letter-spacing: 1px;
-      font-size: 1.6rem;
+      font-size: clamp(1.2rem, 10vw, 2rem);
       font-weight: 100;
+      // border: 1px solid red;
+      text-align: center;
+
+      @include respond(desktop-lg) {
+        text-align: left;
+      }
 
       .text-bold {
         font-weight: bold;
@@ -63,12 +117,16 @@
 
     .hero-circle {
       @include absCenter;
-      width: 33rem;
+      width: 30rem;
     }
 
     .hero-arrow-down {
-      height: 10vh;
-      transform: translateY(150%);
+      height: clamp(5.5rem, 5vh, 10rem);
+      transform: translateY(160%);
+
+      @include respond(phone-xs) {
+        height: 7vh;
+      }
     }
   }
 }

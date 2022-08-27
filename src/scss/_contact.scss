@@ -1,4 +1,49 @@
 .contactContainer {
+
+
+  .contactFlexContainer {
+
+    // border: 1px solid red;
+
+    position: relative;
+
+    @include respond(desktop-sm) {
+      display: flex;
+      margin: 2rem;
+      position: relative;
+    }
+
+    @include respond(desktop-lg) {
+      max-width: 100rem;
+      margin: auto;
+      margin-bottom: 5rem;
+    }
+
+    .decoBox {
+      opacity: .5;
+      @include absCenter;
+      top: 29%;
+      width: 95vw;
+      height: 58%;
+      z-index: -1;
+
+      @include respond(phone-xs) {
+        width: 100%;
+      }
+
+      @include respond(desktop-sm) {
+        width: 100%;
+        height: 85%;
+        left: 0;
+        width: 56%;
+        top: 13%;
+        // top: 50%;
+        transform: translate(0, 0);
+        // height: 70%;
+      }
+    }
+  }
+
   .contactInfo {
     width: 90%;
     margin: 2rem auto 0 auto;
@@ -7,24 +52,42 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
     font-weight: 100;
+    // width: 80%;
+    // border: 1px solid green;
 
-    .decoBox {
-      @include absCenter;
-      width: 95vw;
+    @include respond(phone-xs) {
+      width: 100%;
     }
+
+    @include respond(landscape) {
+      width: 50%;
+    }
+
+
 
     .contactItem {
       display: flex;
+      flex-wrap: wrap;
       position: relative;
-      justify-content: flex-start;
       align-items: center;
-      width: 70%;
+      width: 80%;
+
+      @include respond(desktop-sm) {
+        width: 70%;
+        font-size: 2rem;
+      }
+
+      p {
+        width: 100%;
+      }
 
       img {
         position: absolute;
-        width: clamp(30px, 1vw, 1rem);
+        // width: clamp(25px, 1vw, 1rem);
+        width: 25px;
+        left: 0;
+        // transform: translateX(-450%);
       }
 
       span {
@@ -41,11 +104,25 @@
       padding: 2rem;
     }
   }
+
   #map {
     width: 90vw;
     height: 60vw;
-    margin: auto;
+    margin: 4rem auto 0 auto;
     background: url(../img/components/dummy_map.jpg) no-repeat center center/cover;
     border-radius: $border-radius-small;
+    opacity: 1;
+
+
+    @include respond(desktop-sm) {
+      width: 50%;
+      height: 40rem;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba($color: #000, $alpha: .5);
+    }
+
+    @include respond(desktop-lg) {
+      width: 60%;
+    }
   }
 }
