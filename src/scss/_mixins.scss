@@ -1,39 +1,45 @@
-// ----- Media Queries ----- 
+// ----- Media Queries -----
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone-xs {
-    @media only screen and (max-width: 325px)
-    {@content};
-}
+    @media only screen and (max-width: 325px) {
+      @content;
+    }
+  }
   // @if $breakpoint == tablet {
   //     @media only screen and (min-width: 500px)
   //     {@content};
   // }
   @if $breakpoint == landscape {
-    @media only screen and (min-width: 600px)
-    {@content};
-}
-@if $breakpoint == '700px' {
-  @media only screen and (min-width: 700px)
-  {@content};
-}
+    @media only screen and (min-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == "700px" {
+    @media only screen and (min-width: 700px) {
+      @content;
+    }
+  }
   @if $breakpoint == desktop-sm {
-      @media only screen and (min-width: 800px)
-      {@content};
+    @media only screen and (min-width: 800px) {
+      @content;
+    }
   }
   @if $breakpoint == desktop-lg {
-      @media only screen and (min-width: 1000px)
-      {@content};
+    @media only screen and (min-width: 1000px) {
+      @content;
+    }
   }
   @if $breakpoint == desktop-xl {
-      @media only screen and (min-width: 1920px)
-      {@content};
+    @media only screen and (min-width: 1921px) {
+      @content;
+    }
   }
 }
 
 // ----- Positioning -----
 
-@mixin flexMe ($flex_direction) {
+@mixin flexMe($flex_direction) {
   display: flex;
   flex-direction: $flex_direction;
   justify-content: center;

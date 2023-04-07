@@ -1,7 +1,10 @@
 .heroContainer {
-  background: url(../img/bg/bg_willy_vertical.png) no-repeat center center/cover;
+  background: url(../img/bg/bg_willy_vertical.png) no-repeat center center;
+  background-size: cover;
   background-attachment: fixed;
   height: 160vw;
+  // border: 1px solid red;
+  margin-top: -5rem;
 
   @include respond(phone-xs) {
     height: 190vw;
@@ -14,20 +17,21 @@
   @include respond(desktop-lg) {
     display: flex;
     align-items: center;
+    // background-size: contain;
     justify-content: space-between;
-    background-size: 70%;
     background-repeat: repeat-x;
   }
 
   @include respond(desktop-xl) {
-    background-size: 40%;
-    // background-position: 0 -10%;
+    background-size: contain;
+    background-position: 0 -10%;
   }
 
   .heroImg {
     display: none;
     width: 40%;
     height: 65vh;
+    max-height: 80rem;
     border-radius: 50px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -35,7 +39,7 @@
     background-size: cover;
     background-position: 40%;
     // box-shadow: 0 10px 10px 10px rgba(0, 0, 0, .4);
-    box-shadow: 0 10px 20px rgba($color: #000, $alpha: .4);
+    box-shadow: 0 10px 20px rgba($color: #000, $alpha: 0.4);
     // outline: 5px solid rgb(63, 63, 63, .5);
     outline-offset: 30px;
     // overflow: hidden;
@@ -64,7 +68,7 @@
       text-align: center;
       margin: $padding-medium 0;
       width: 100%;
-      line-height: .7;
+      line-height: 0.7;
 
       .crown {
         padding-bottom: $padding-large;
@@ -76,12 +80,12 @@
         font-size: clamp(2rem, 18vmin, 10rem);
         font-weight: 100;
         letter-spacing: 7px;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
       }
 
       .heroSubHeading {
         font-family: $font-special-sec;
-        font-size: clamp(.5rem, 7vmin, 3rem);
+        font-size: clamp(0.5rem, 7vmin, 3rem);
         font-weight: lighter;
         letter-spacing: 1px;
       }

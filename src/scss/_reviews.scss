@@ -2,7 +2,7 @@
   background: url(../img/bg/bg_willy_vertical.png) no-repeat top center/cover;
   background-attachment: fixed;
   width: 100%;
-  margin: 5rem auto;
+  // margin: 5rem auto;
   padding: 0 2rem;
   height: 60vw;
   display: flex;
@@ -14,13 +14,13 @@
   }
 
   @include respond(desktop-lg) {
-    background-size: 70%;
-    background-repeat: repeat-x;
+    background-size: 100%;
+    background-repeat: repeat;
   }
 
   @include respond(desktop-xl) {
-    background-size: 40%;
-    background-position: 0 -250%;
+    background-size: 50%;
+    // background-position: 0 -250%;
   }
 
   .reviewButtonGroup {
@@ -37,6 +37,4 @@
       }
     }
   }
-
-
 }
